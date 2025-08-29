@@ -104,7 +104,7 @@
     console.log("Ticket ID:", ticketId);
 
     document.getElementById("ticket-id").innerText = ticketId || "N/A";
-    document.getElementById("ticket-name").innerText = "TAU"; // Replace with actual name
+    document.getElementById("ticket-name").innerText = paymentReference || "TAU"; // Replace with actual name
 
     async function sendTicket() {
       if (!ticketId) {
