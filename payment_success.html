@@ -87,6 +87,8 @@
     <div class="checkmark">✅</div>
     <h1>Payment Successful</h1>
     <p>Your ticket is being generated and will be sent to your email.</p>
+    <p>Your ticket ID is: <span id="ticket-id"></span></p>
+    <p>Your ticket Name is: <span id="ticket-name"></span></p>
     <p id="status">Processing...</p>
 
     <!-- Back to Home Button -->
@@ -100,6 +102,9 @@
 
     console.log("Payment Reference:", paymentReference);
     console.log("Ticket ID:", ticketId);
+
+    document.getElementById("ticket-id").innerText = ticketId || "N/A";
+    document.getElementById("ticket-name").innerText = "TAU"; // Replace with actual name
 
     async function sendTicket() {
       if (!ticketId) {
